@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+    <div class="container">
+        <div class="page_title text-center">
+            <h1>Make Your Blogs Today</h1>
+        </div>
+        <div class="blogAddSection pt-3">
+            <form action="/add_blog" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control " id="exampleFormControlInput1" name="title" placeholder="Blog Title">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Add Blog</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <%- include('partials/footer') %>
