@@ -15,10 +15,10 @@ app.post("/add_blog", (req, res) => {
     let title = req.body["title"];
     let content = req.body["content"];
     
-    console.log(`Title: ${title}`);
-    console.log(`Content: ${content}`);
-    
-    res.redirect("/");
+    res.render("index.ejs", {
+        title: title,
+        content: content
+    });
 });
 
 

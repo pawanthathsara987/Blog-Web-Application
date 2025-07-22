@@ -7,7 +7,8 @@
         <div class="blogAddSection pt-3">
             <form action="/add_blog" method="POST">
                 <div class="mb-3">
-                    <input type="text" class="form-control " id="exampleFormControlInput1" name="title" placeholder="Blog Title">
+                    <input type="text" class="form-control " id="exampleFormControlInput1" name="title"
+                        placeholder="Blog Title">
                 </div>
                 <div class="mb-3">
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="3"></textarea>
@@ -17,9 +18,25 @@
                 </div>
             </form>
         </div>
+        <% if(locals.title && locals.content) { %>
+            <div class="postSection">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            <%= title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= content %>
+                        </p>
+
+                        <a href="#" class="btn btn-success">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
     </div>
-
-
 
 
 
